@@ -19,20 +19,13 @@ mpl.rcParams['xtick.labelsize'] = 12
 mpl.rcParams['ytick.labelsize'] = 12 
 
 from utils_custom_tvision_functions import get_dataloaders, plot_curve
-from AVS_config_M1_celeba import AVS_config as AVS_config_for_M1
-from AVS_config_M2 import AVS_config as AVS_config_for_M2
 from AVS_config_M3_celeba import AVS_config as AVS_config_for_M3
-# 3.24.2023 - tao88: different config_3 for creation of valid set
 from AVS_config_M3_celeba_valid import AVS_config as AVS_config_for_M3_valid
-from AVS_model_M1_vgg import customizable_VGG as VGG_for_M1
-from AVS_model_M2 import context_network
-from AVS_model_M3_vgg import customizable_VGG as VGG_for_M3
-from utils_custom_tvision_functions import imshow, plotregions, plotspots, plotspots_at_regioncenters, region_iou, region_area
 # LSTM
 from config_lstm import AVS_config as config_for_LSTM
 from model_lstm import customizable_LSTM as LSTM
 from model_lstm_masks import customizable_LSTM as LSTM_masks
-from weight_init import weight_init
+# from weight_init import weight_init
 # Debug
 from torchvision.utils import save_image
 import matplotlib.pyplot as plt
@@ -48,8 +41,6 @@ viridis = mpl.colormaps['viridis'].resampled(num_seg_classes)
 
 #%% Instantiate parameters, dataloaders, and model
 # Parameters
-config_1 = AVS_config_for_M1
-config_2 = AVS_config_for_M2
 config_3 = AVS_config_for_M3
 # 3.24.2023 - tao88
 config_3_valid = AVS_config_for_M3_valid
